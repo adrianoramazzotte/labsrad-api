@@ -1,4 +1,4 @@
-package com.ramazzotte.domain;
+package com.ramazzotte.domain.exercicio;
 
 import java.io.Serializable;
 
@@ -6,25 +6,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
 @Entity
-public class Categoria implements Serializable{
+public class Produto implements Serializable{
 	private static final long serialVersionUID = 1L;
-	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)	
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
-	public Categoria() {
-		super();
-	}
-	public Categoria(Integer id, String descricao, Boolean status) {
-		super();
-		this.id = id;
-		this.descricao = descricao;
-		this.status = status;
-	}
-	private String descricao;
-	private Boolean status;
+	private String  descricao;
 	public Integer getId() {
 		return id;
 	}
@@ -37,16 +25,16 @@ public class Categoria implements Serializable{
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public Boolean getStatus() {
-		return status;
+	public Produto(Integer id, String descricao) {
+		super();
+		this.id = id;
+		this.descricao = descricao;
 	}
-	public void setStatus(Boolean status) {
-		this.status = status;
+	public Produto() {
+		super();
 	}
 	
 	
-	
-
 	
 
 

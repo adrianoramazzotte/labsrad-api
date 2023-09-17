@@ -22,7 +22,6 @@ public class Patrimonio implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;	
-	
 	private String descricao;
 	private OffsetDateTime dataaquisicao;
 	private BigDecimal valor;
