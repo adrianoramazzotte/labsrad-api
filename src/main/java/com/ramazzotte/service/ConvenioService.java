@@ -31,4 +31,21 @@ public class ConvenioService {
 		return list;
 	}
 
+
+	public Convenio insert(Convenio obj) {
+		return repo.save(obj);
+	}
+
+
+	public Convenio atualizaConvenio(Convenio obj) {
+
+		return repo.save(obj);
+	}
+
+
+	public void delete(Integer id) {
+		repo.deleteById(id);
+		
+	}
+
 }
