@@ -30,7 +30,8 @@ public class Exame implements Serializable{
 	@JsonIgnore
 	private Boolean status;
 	@OneToMany(mappedBy = "id.exame")
-	private Set<AtendimentoItens> itensAtendimento = new HashSet<>();	
+	private Set<AtendimentoItens> itensAtendimento = new HashSet<>();
+	@JsonIgnore
 	@OneToMany(mappedBy = "id.exame")
 	private Set<ExameConvenio> examesConvenio = new HashSet<>();
 	
