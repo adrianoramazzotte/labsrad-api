@@ -15,6 +15,7 @@ import javax.persistence.OneToMany;
 import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.ramazzotte.domain.dto.ConvenioNewDTO;
 @Entity
 public class Convenio implements Serializable{
 	private static final long serialVersionUID = 1L;
@@ -54,6 +55,11 @@ public class Convenio implements Serializable{
 	public Convenio() {
 	}
 
+	public Convenio(ConvenioNewDTO obj) {
+		this.id = null;
+		this.descricao = obj.getDescricao();
+		this.status = obj.getStatus();
+	}
 	@Override
 	public String toString() {
 		return "Convenio [id=" + id + ", descricao=" + descricao + ", status=" + status + "]";

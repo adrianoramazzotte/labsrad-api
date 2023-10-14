@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.ramazzotte.domain.Convenio;
+import com.ramazzotte.domain.dto.ConvenioNewDTO;
 import com.ramazzotte.service.ConvenioService;
 
 
@@ -43,7 +44,8 @@ public class ConvenioResource {
 		return ResponseEntity.noContent().build();
 	}
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<Convenio> insert(@RequestBody Convenio obj) {
+	public ResponseEntity<Convenio> insert(@Valid @RequestBody ConvenioNewDTO obj) {
+		
 		Convenio objNovo = service.insert(obj);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().
 				path("/{id}").buildAndExpand(objNovo.getId()).toUri();

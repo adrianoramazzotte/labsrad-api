@@ -31,7 +31,7 @@ public class Exame implements Serializable{
 	private Boolean status;
 	@OneToMany(mappedBy = "id.exame")
 	private Set<AtendimentoItens> itensAtendimento = new HashSet<>();
-	@JsonIgnore
+//	@JsonIgnore
 	@OneToMany(mappedBy = "id.exame")
 	private Set<ExameConvenio> examesConvenio = new HashSet<>();
 	

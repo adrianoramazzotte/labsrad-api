@@ -23,5 +23,7 @@ public interface ConvenioRepository extends JpaRepository<Convenio, Integer> {
     @Query(value= "select * from convenio where id = ?", nativeQuery = true)
 	Convenio buscarPorId(Integer id);
 
+	Convenio findByDescricao(String descricao);
+
 
 }
