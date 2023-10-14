@@ -6,11 +6,13 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.ramazzotte.domain.Paciente;
 import com.ramazzotte.repository.PacienteRepository;
 import com.ramazzotte.repository.filter.PacienteFilter;
-
+@RestController
+@RequestMapping(value = "/pacientes")
 public class PacienteResource {
 	
 	@Autowired
