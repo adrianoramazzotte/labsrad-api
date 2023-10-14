@@ -1,4 +1,4 @@
-package com.ramazzotte.validation;
+package com.ramazzotte.validation.convenio;
 
 
 import java.util.ArrayList;

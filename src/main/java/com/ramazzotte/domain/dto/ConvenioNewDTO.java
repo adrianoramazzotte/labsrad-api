@@ -6,7 +6,7 @@ import java.util.Set;
 import javax.persistence.OneToMany;
 
 import com.ramazzotte.domain.AtendimentoItens;
-import com.ramazzotte.validation.ConvenioInsert;
+import com.ramazzotte.validation.convenio.ConvenioInsert;
 @ConvenioInsert
 public class ConvenioNewDTO {
 	

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.ramazzotte.domain.Convenio;
+import com.ramazzotte.domain.dto.ConvenioDTO;
 import com.ramazzotte.domain.dto.ConvenioNewDTO;
 import com.ramazzotte.service.ConvenioService;
 
@@ -54,7 +55,7 @@ public class ConvenioResource {
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-	public ResponseEntity<Convenio> update(@RequestBody Convenio obj, @PathVariable Integer id) {
+	public ResponseEntity<Convenio> update(@Valid @RequestBody ConvenioDTO obj, @PathVariable Integer id) {
 		obj.setId(id);
 		Convenio obj1 = service.atualizaConvenio(obj);
 

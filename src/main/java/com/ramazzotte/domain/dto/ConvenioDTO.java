@@ -1,5 +1,8 @@
 package com.ramazzotte.domain.dto;
 
+import com.ramazzotte.validation.convenio.ConvenioUpdate;
+
+@ConvenioUpdate
 public class ConvenioDTO {
 	
 	private Integer id;		

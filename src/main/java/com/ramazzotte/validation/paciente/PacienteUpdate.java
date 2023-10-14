@@ -1,4 +1,4 @@
-package com.ramazzotte.validation;
+package com.ramazzotte.validation.paciente;
 
 
 import java.lang.annotation.ElementType;
@@ -11,10 +11,10 @@ import javax.validation.Payload;
 
 
 
-@Constraint(validatedBy = ConvenioUpdateValidator.class)
+@Constraint(validatedBy = PacienteUpdateValidator.class)
 @Target({ ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ConvenioUpdate {
+public @interface PacienteUpdate {
 	String message() default "Erro de validação";
 
 	Class<?>[] groups() default {};

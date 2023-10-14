@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ramazzotte.domain.Convenio;
+import com.ramazzotte.domain.dto.ConvenioDTO;
 import com.ramazzotte.domain.dto.ConvenioNewDTO;
 import com.ramazzotte.repository.ConvenioRepository;
 
@@ -40,9 +41,9 @@ public class ConvenioService {
 	}
 
 
-	public Convenio atualizaConvenio(Convenio obj) {
-
-		return repo.save(obj);
+	public Convenio atualizaConvenio(ConvenioDTO obj) {
+		Convenio conv = new  Convenio(obj);
+		return repo.save(conv);
 	}
 
 

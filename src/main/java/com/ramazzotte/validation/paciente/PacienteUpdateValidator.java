@@ -1,4 +1,4 @@
-package com.ramazzotte.validation;
+package com.ramazzotte.validation.paciente;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ import com.ramazzotte.resource.excepition.FieldMessage;
 
 
 
-public class ConvenioUpdateValidator implements ConstraintValidator<ConvenioUpdate, ConvenioDTO> {
+public class PacienteUpdateValidator implements ConstraintValidator<PacienteUpdate, ConvenioDTO> {
 	
 	@Autowired
 	private HttpServletRequest request;
@@ -29,7 +29,7 @@ public class ConvenioUpdateValidator implements ConstraintValidator<ConvenioUpda
 	private ConvenioRepository repo;
 
 	@Override
-	public void initialize(ConvenioUpdate ann) {
+	public void initialize(PacienteUpdate ann) {
 	}
 
 	@Override
