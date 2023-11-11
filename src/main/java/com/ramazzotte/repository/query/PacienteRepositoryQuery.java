@@ -6,9 +6,10 @@ import org.springframework.data.domain.Pageable;
 import com.ramazzotte.domain.Paciente;
 import com.ramazzotte.repository.filter.PacienteFilter;
 
-
 public interface PacienteRepositoryQuery {
+		
+		public Page<Paciente> filtrar(PacienteFilter pacienteFilter, Pageable pageable);
+
 	
-	public Page<Paciente> filtrar(PacienteFilter Pacientefilter, Pageable pageable);
 
 }

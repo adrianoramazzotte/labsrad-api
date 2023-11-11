@@ -14,6 +14,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.ramazzotte.domain.dto.flat.ExameFlatInsert;
 @Entity
 public class Exame implements Serializable{
 	@Override
@@ -54,7 +55,11 @@ public class Exame implements Serializable{
 		this.status = status;
 	}
 
-
+	public Exame(ExameFlatInsert obj) {
+		this.descricao = obj.getDescricao();
+		this.status = obj.getStatus();
+				
+	}
 
 	public Exame(Integer id, String descricao, Boolean status, Set<AtendimentoItens> itensAtendimento,
 			Set<ExameConvenio> examesConvenio) {

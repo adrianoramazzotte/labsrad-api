@@ -180,7 +180,26 @@ public class Empresa implements Serializable {
 	public Empresa() {
 		
 	}
-
+	
+	public Empresa(@Valid EmpresaNew obj) {
+		this.id = null;
+		this.cidade = obj.getCidade();
+		this.razaosocial = obj.getRazaosocial();
+		this.cpfoucnpj = obj.getCpfoucnpj();
+		this.naturezapessoa = obj.getNaturezapessoa();
+		this.uf = obj.getUf();
+		this.valor = obj.getValor();
+		this.cep = obj.getCep();
+		this.logradouro = obj.getLogradouro();
+		this.numero = obj.getNumero();
+		this.complemento = obj.getComplemento();
+		this.bairro = obj.getBairro();
+		this.nomecontato = obj.getNomecontato();
+		this.telefone = obj.getTelefone();
+		this.whats = obj.getWhats();
+		this.email = obj.getEmail();
+		this.status = obj.getStatus();
+	}
 	@Override
 	public String toString() {
 		return "Empresa [id=" + id + ", cidade=" + cidade + ", razao=" + razaosocial + ", cpfOuCnpj=" + cpfoucnpj

@@ -3,25 +3,36 @@ package com.ramazzotte.repository.filter;
 import java.time.OffsetDateTime;
 import java.util.Date;
 
-import javax.persistence.Column;
-
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class PacienteFilter {
 	
-	private String id;	
-	private String nome;
-    private OffsetDateTime datanascde;
-    private OffsetDateTime datanascate;
-	private String sexo;	
-	private Boolean status;
+	
+	private String id;
 	private String cpf;
-	private String telefone;
+	private String nome;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date datanascde;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date datanascate;
+	private String sexo;
+	private String emailusuario;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date datagravacaode;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date datagravacaoate;
+	private String status;
 	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
 		this.id = id;
+	}
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 	public String getNome() {
 		return nome;
@@ -29,16 +40,16 @@ public class PacienteFilter {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public OffsetDateTime getDatanascde() {
+	public Date getDatanascde() {
 		return datanascde;
 	}
-	public void setDatanascde(OffsetDateTime datanascde) {
+	public void setDatanascde(Date datanascde) {
 		this.datanascde = datanascde;
 	}
-	public OffsetDateTime getDatanascate() {
+	public Date getDatanascate() {
 		return datanascate;
 	}
-	public void setDatanascate(OffsetDateTime datanascate) {
+	public void setDatanascate(Date datanascate) {
 		this.datanascate = datanascate;
 	}
 	public String getSexo() {
@@ -47,36 +58,29 @@ public class PacienteFilter {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-	public Boolean getStatus() {
+	public String getEmailusuario() {
+		return emailusuario;
+	}
+	public void setEmailusuario(String emailusuario) {
+		this.emailusuario = emailusuario;
+	}
+	public Date getDatagravacaode() {
+		return datagravacaode;
+	}
+	public void setDatagravacaode(Date datagravacaode) {
+		this.datagravacaode = datagravacaode;
+	}
+	public Date getDatagravacaoate() {
+		return datagravacaoate;
+	}
+	public void setDatagravacaoate(Date datagravacaoate) {
+		this.datagravacaoate = datagravacaoate;
+	}
+	public String getStatus() {
 		return status;
 	}
-	public void setStatus(Boolean status) {
+	public void setStatus(String status) {
 		this.status = status;
-	}
-	public String getCpf() {
-		return cpf;
-	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-	public String getTelefone() {
-		return telefone;
-	}
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
-	public PacienteFilter(String id, String nome, OffsetDateTime datanascde, OffsetDateTime datanascate, String sexo,
-			Boolean status, String cpf, String telefone) {
-		this.id = id;
-		this.nome = nome;
-		this.datanascde = datanascde;
-		this.datanascate = datanascate;
-		this.sexo = sexo;
-		this.status = status;
-		this.cpf = cpf;
-		this.telefone = telefone;
-	}
-	public PacienteFilter() {
 	}
 	
 	
