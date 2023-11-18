@@ -12,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.ramazzotte.domain.dto.ConvenioDTO;
@@ -60,10 +61,11 @@ public class Convenio implements Serializable{
 		this.descricao = obj.getDescricao();
 		this.status = obj.getStatus();
 	}
-	public Convenio(ConvenioDTO obj) {
-		this.id = null;
+	public Convenio(@Valid ConvenioDTO obj) {
+		this.id = obj.getId();
 		this.descricao = obj.getDescricao();
 		this.status = obj.getStatus();
+		
 	}
 	@Override
 	public String toString() {
