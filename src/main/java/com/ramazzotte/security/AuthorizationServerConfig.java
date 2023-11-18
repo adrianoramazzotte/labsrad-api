@@ -46,7 +46,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         	.and()
         	
 			.withClient("mobile")
-			.secret("m0b1l30")
+			.secret(passwordEncoder.encode("#SERVER@labsrad"))
 			.scopes("read")
 			.authorizedGrantTypes("password", "refresh_token")
 			.accessTokenValiditySeconds(1800)

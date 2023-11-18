@@ -67,6 +67,8 @@ public class UsuarioService {
 	}
 	
 	public UsuarioDTO findF(Integer id) {
+		System.out.println("Usuairo do token");
+		System.out.println(usutoken.getUsu().getNome());
 		Usuario usu = repo.findPorId(id);
 		usu.setSenha(null);
     	List<Empresa> empresas = repoempresa.findAllAtivas();

@@ -23,6 +23,12 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 		http.cors()
 		.and().authorizeRequests()
 		        .antMatchers("/forgot").permitAll()
+//		        .antMatchers("/usuarios/**").permitAll()
+//		        .antMatchers("/d/**").permitAll()
+//		        .antMatchers("/webjars/**").permitAll()
+//		        .antMatchers("/swagger-ui.html/**").permitAll()
+//		        .antMatchers("/swagger-resources/**").permitAll()
+//		        .antMatchers("/v2/api-docs").permitAll()		        
 				.anyRequest().authenticated()
 				.and()
 			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
@@ -41,7 +47,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 		config.setAllowedHeaders(Arrays.asList("Authorization","Content-Type","Accept"));
 		config.addAllowedMethod("*");
 		config.setMaxAge(3600L);
-		config.setAllowedOrigins(Arrays.asList("http://localhost:4200","https://app-hml.uniradradiologia.com.br","https://app.uniradradiologia.com.br"));
+		config.setAllowedOrigins(Arrays.asList("http://localhost:4200","https://app-hml.uniradradiologia.com.br","https://app.uniradradiologia.com.br","https://outraempresa.com.br"));
+//		config.setAllowedOrigins(Arrays.asList("*"));
 		
 		
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
