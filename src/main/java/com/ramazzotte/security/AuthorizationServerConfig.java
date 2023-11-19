@@ -34,8 +34,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 		clients
 			.inMemory()
-			.withClient("unirad")
-			.secret(passwordEncoder.encode("#SERVER@unirad22"))
+			.withClient("labsrad")
+			.secret(passwordEncoder.encode("#SERVER@labsrad"))
 			.scopes("read", "write")
 			.authorizedGrantTypes("password", "refresh_token")
 		    .accessTokenValiditySeconds(60*60*24*7)
