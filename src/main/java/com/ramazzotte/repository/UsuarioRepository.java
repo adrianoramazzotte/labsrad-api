@@ -67,6 +67,8 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 	@Transactional
 	@Query(value = "UPDATE usuario SET tenantativo = tenant_id WHERE email = ?", nativeQuery = true)
 	void voltartenant(String buscarEmailUsuToken);
+	@Query(value= "select * from usuario where telefone=?", nativeQuery = true) 
+	Usuario findPorTelefone(String telefone);
 
 
 	

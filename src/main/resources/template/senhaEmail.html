@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <title>Manuprev Avisa</title>
+    <style>
+        /* A simple css reset */
+        body,table,thead,tbody,tr,td,img {
+            padding: 0;
+            margin: 0;
+            border: none;
+            border-spacing: 0px;
+            border-collapse: collapse;
+            vertical-align: top;
+            background-color: #ecf0f1;
+        }
+
+        /* Add some padding for small screens */
+        .wrapper {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        h1,h2,h3,h4,h5,h6,p {
+            margin: 0;
+            padding: 0;
+            padding-bottom: 20px;
+            line-height: 1.6;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+
+        p,a,li {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+        a {
+          text-decoration: none;
+        }
+        .btn-primary {
+          background-color: transparent;
+        }
+        .btn-primary:hover{
+          background-color: rgb(13 110 253 / 25%);
+        }
+
+        @media only screen and (max-width: 620px) {
+
+            .wrapper .section {
+                width: 100%;
+            }
+
+            .wrapper .column {
+                width: 100%;
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table width="100%">
+        <tbody>
+            <tr>
+                <td class="wrapper" width="600" align="center">
+                    <!-- Header image -->
+                    <table class="section header" cellpadding="0" cellspacing="0" width="600">
+                        <tr>
+                            <td class="column">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td align="center">
+                                                <img src="https://seudominio/assets/images/unirad.png" alt="picsum" width="600" />
+                                                <h2>Atenção para sua nova senha!</h2>   
+                                                <p>Usuario: ${email.email}</p>   
+                                                <p>Senha:   ${email.senha}</p>                            
+                                                
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

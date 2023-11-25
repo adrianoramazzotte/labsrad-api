@@ -43,7 +43,7 @@ public class SwaggerConfig {
 				.globalResponseMessage(RequestMethod.DELETE, Arrays.asList(m204del, m403, m404, m500))
 				.select()
 				//.apis(RequestHandlerSelectors.any())
-				.apis(RequestHandlerSelectors.basePackage("com.protec.resource"))
+				.apis(RequestHandlerSelectors.basePackage("com.ramazzotte.resource"))
 				.paths(PathSelectors.any())
 				.build()
 				.apiInfo(apiInfo());

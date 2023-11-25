@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-@ConfigurationProperties("unirad.email")
+@ConfigurationProperties("labsrad.email")
 public class EmailProperties {
 	@NotNull
 	private String remetente;

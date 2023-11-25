@@ -42,6 +42,7 @@ public class Usuario implements Serializable {
 	private String login;
 	@JsonView(UsuarioView.Resumo1.class)
 	private String email;
+	private String telefone;
 
 	
 	private Integer tenantativo;
@@ -60,6 +61,14 @@ public class Usuario implements Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
 	}
 
 	public Integer getTenantativo() {

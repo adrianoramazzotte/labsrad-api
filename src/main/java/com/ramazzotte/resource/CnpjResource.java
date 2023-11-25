@@ -12,10 +12,13 @@ import com.ramazzotte.domain.dto.CnpjFront;
 import com.ramazzotte.resource.util.BR;
 import com.ramazzotte.service.SevicosResquestAllAIP;
 
+import springfox.documentation.annotations.ApiIgnore;
+
 
 
 @RestController
 @RequestMapping(value = "/cnpj")
+@ApiIgnore
 public class CnpjResource {
 	
 
