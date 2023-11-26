@@ -8,8 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ramazzotte.domain.dto.rel.AtendimentoDashboarGrafico;
 import com.ramazzotte.service.DashService;
+
+import springfox.documentation.annotations.ApiIgnore;
 @RestController
 @RequestMapping(value = "/graficos")
+@ApiIgnore
 public class DashboardGraficoResource {
 	
 	@Autowired

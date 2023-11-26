@@ -81,7 +81,7 @@ public class AtendimentoResource {
 
 	@CheckSecurity.Atendimento.PodeCadastrar
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<?> insert(@RequestBody AtendimentoFlat obj) {
+	public ResponseEntity<AtendimentoFlat> insert(@RequestBody AtendimentoFlat obj) {
 		AtendimentoFlat objNovo = service.insert(obj);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().
 				path("/{id}").buildAndExpand(objNovo.getId()).toUri();

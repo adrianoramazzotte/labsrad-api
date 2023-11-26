@@ -19,10 +19,13 @@ import com.ramazzotte.domain.Classepermissao;
 import com.ramazzotte.domain.dto.flat.ClassePermissaoFlat;
 import com.ramazzotte.service.ClassepermissaoService;
 
+import springfox.documentation.annotations.ApiIgnore;
+
 
 
 @RestController
 @RequestMapping(value = "/permissoes")
+@ApiIgnore
 public class ClassepermissaoResource {
 	@Autowired
 	private ModelMapper modelMapper;

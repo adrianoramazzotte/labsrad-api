@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.ramazzotte.domain.Usuario;
 import com.ramazzotte.domain.dto.flat.EmailDTO;
+import com.ramazzotte.email.EnviarEmail;
 import com.ramazzotte.repository.UsuarioRepository;
 import com.ramazzotte.service.exception.ObjectNotFoundException;
 
@@ -19,7 +20,8 @@ public class ResetSenhaService {
 	private UsuarioRepository usuRepo;
 	@Autowired
 	private PasswordEncoder pe;
-	
+	@Autowired
+	private EnviarEmail sendemail;
 
 	
 	private Random rand = new Random();
@@ -36,6 +38,7 @@ public class ResetSenhaService {
 		
 		usuRepo.save(usuario);
 		email.setSenha(newPass);
+		sendemail.enviarEmailSenha(email);
 
 
 	}

@@ -17,8 +17,9 @@ import javax.persistence.OneToMany;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.ramazzotte.domain.LogSistema;
 import com.ramazzotte.domain.Permissao;
-@Entity
+import com.ramazzotte.validation.usuario.UsuarioInsert;
 
+@UsuarioInsert
 public class UsuarioNewDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
