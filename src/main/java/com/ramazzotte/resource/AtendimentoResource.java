@@ -21,12 +21,12 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.ramazzotte.domain.Atendimento;
 import com.ramazzotte.domain.dto.flat.AtendimentoFlat;
 import com.ramazzotte.domain.dto.flat.AtendimentoItensFlat;
 import com.ramazzotte.repository.AtendimentoRepository;
 import com.ramazzotte.repository.filter.AtendimentoFilter;
 import com.ramazzotte.security.resource.CheckSecurity;
-import com.ramazzotte.security.resource.CheckSecurity.Atendimento;
 import com.ramazzotte.service.AtendimentoService;
 import com.ramazzotte.service.rels.RelAtendimento;
 import com.ramazzotte.service.util.Tenantuser;
@@ -57,13 +57,14 @@ public class AtendimentoResource {
 	}
  
  
-//	@CheckSecurity.Atendimento.PodeConsultar
-//	@RequestMapping(method = RequestMethod.GET)
-//	public Page<AtendimentoFlat> findAllPag(AtendimentoFilter atendimentoFilter, Pageable pageable) {
-//		Page<Atendimento> pacs = repoAtend.filtrar(atendimentoFilter, pageable);
-//		Page<AtendimentoFlat> atedflat = service.mudarPacienteParaFlat(pacs);
-//		return atedflat;
-//	}
+	 
+		@CheckSecurity.Atendimento.PodeConsultar
+		@RequestMapping(method = RequestMethod.GET)
+		public Page<AtendimentoFlat> findAllPag(AtendimentoFilter atendimentoFilter, Pageable pageable) {
+			Page<Atendimento> pacs = repoAtend.filtrar(atendimentoFilter, pageable);
+			Page<AtendimentoFlat> atedflat = service.mudarPacienteParaFlat(pacs);
+			return atedflat;
+		}
 	@RequestMapping(value = "/inativos", method = RequestMethod.GET)
 	public ResponseEntity<List<AtendimentoFlat>> findAllInativo() {
 	//	List<AtendimentoDTO> list = service.findAll();

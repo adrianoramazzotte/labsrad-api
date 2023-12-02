@@ -37,10 +37,7 @@ public class AtendimentoRepositoryImpl implements AtendimentoRepositoryQuery {
 	@Override
 	public Page<Atendimento> filtrar(AtendimentoFilter atendimentofilter, Pageable pageable) {
 		CriteriaBuilder builder = manager.getCriteriaBuilder();
-		// select * from cliente
-		// from Cliente
 		CriteriaQuery<Atendimento> criteria = builder.createQuery(Atendimento.class);
-//		where
 		Root<Atendimento> root = criteria.from(Atendimento.class);
 		From<?, ?> logJoin = root.join("logs", JoinType.LEFT);
 		From<?, ?> pacienteJoin = root.join("paciente", JoinType.INNER);
