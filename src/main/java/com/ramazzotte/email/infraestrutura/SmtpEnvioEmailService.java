@@ -11,6 +11,7 @@ import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 
 import com.ramazzotte.config.EmailProperties;
 import com.ramazzotte.email.EnvioEmailService;
+import com.ramazzotte.email.EnvioEmailService.Mensagem;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
